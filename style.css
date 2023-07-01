@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+:root {
+    --IphoneWidth: calc(2688 / 2);
+    --IphoneHeight: calc(1242px / 2);
+}
+
+#iphoneMock {
+    width: var(--IphoneWidth);
+    height: var(--IphoneHeight);
+    display: grid;
+    grid-template-rows: 40% 60%;
+}
+
+#upperHalf {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+}
+
+#lowerhalf {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: #272727;
+    grid-column: 1/-1;
+    grid-row: 2/3;
+
+}
