@@ -2,11 +2,32 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    outline: none;
+    border: none;
 }
 
 :root {
-    --IphoneWidth: calc(2688 / 2);
-    --IphoneHeight: calc(1242px / 2);
+    --IphoneWidth: calc(414px);
+    --IphoneHeight: calc(896px);
+}
+
+.btn {
+    border-radius: 50px;
+    color:white;
+    font-size: 30px;
+}
+
+.regularBtn {
+    background-color: #636362;
+}
+
+.operatorBtn {
+    background-color: orange;
+}
+
+.settingsBtn {
+    background-color: #D6D6D6;
+    color: black;
 }
 
 #iphoneMock {
@@ -14,9 +35,14 @@
     height: var(--IphoneHeight);
     display: grid;
     grid-template-rows: 40% 60%;
+    background-color: #272727;
+    padding: 0px 10px 30px 10px;
 }
 
 #upperHalf {
+    display: flex;
+    justify-content: end;
+    align-items: end;
     grid-column: 1/-1;
     grid-row: 1/2;
 }
@@ -26,8 +52,19 @@
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    background-color: #272727;
     grid-column: 1/-1;
     grid-row: 2/3;
+    gap: 10px;
 
+}
+
+#zero {
+    grid-column: 1/3;
+    text-align: left;
+    padding-left: 40px;
+}
+
+#value {
+    font-size: 80px;
+    color: white;
 }
