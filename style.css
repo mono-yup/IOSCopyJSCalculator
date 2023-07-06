@@ -65,6 +65,8 @@
 }
 
 #value {
-    font-size: 80px;
+    display: block;
+    max-height: 5em;
+    height: 4em;
     color: white;
 }
