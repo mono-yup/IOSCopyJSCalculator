@@ -20,13 +20,16 @@ let addition = document.getElementById("addition");
 let zero = document.getElementById("zero");
 let decimal = document.getElementById("decimal");
 let equals = document.getElementById("equals");
+let num1;
+let num2;
+let operator;
 
 let numArr = [ seven, eight,  nine, four, five, six, one, two, three,  zero,]
 let operatorArr = [ negative,  clear, percentage, divide, multi, subtract, addition, decimal]
 
 
 equals.addEventListener("click", () => {
-       console.log(Number(value.innerText) + 10000)
+       console.log(Number(value.innerText))
     })
 
 numArr.forEach( (e) => {
@@ -42,6 +45,14 @@ numArr.forEach( (e) => {
         
     })
 });
+
+// 
+//math operators
+addition.addEventListener("click", () => {
+    num1 = Number(value.innerText);
+    erase = true;
+    operator = "+"
+})
 
 //
 //operators
@@ -61,14 +72,12 @@ percentage.addEventListener("click", () => {
 //
 //
 
+equals.addEventListener("click", () => {
+    num2 = Number(value.innerText);
+    if (operator === "+"){
+    total = num1 + num2;
+    value.innerText = total
+    }
 
-
-let selectedNum;
-let secondNum;
-
-
-
-
-function calculate (selectedNum,operatorArr, secondNum) {
-
-}
+    erase = true;
+}) 
