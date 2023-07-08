@@ -23,9 +23,10 @@ let equals = document.getElementById("equals");
 let num1;
 let num2;
 let operator = "";
+let deci = false;
 
-let numArr = [ seven, eight,  nine, four, five, six, one, two, three,  zero, decimal]
-let operatorArr = [ negative,  clear, percentage, divide, multi, subtract, addition]
+let numArr = [ seven, eight,  nine, four, five, six, one, two, three,  zero]
+let operatorArr = [ negative,  clear, percentage, divide, multi, subtract, addition, decimal]
 
 numArr.forEach( (e) => {
     e.addEventListener("click", () => {
@@ -34,6 +35,7 @@ numArr.forEach( (e) => {
         if (erase === true){
             value.innerText = "";
             erase = false;
+            deci = false
         }
         value.innerText =  value.innerText + total;
 
@@ -90,6 +92,14 @@ percentage.addEventListener("click", () => {
     console.log(num1)
     erase = true;
     value.innerText = num1.toString()
+})
+
+decimal.addEventListener("click", () => {
+    if (deci !== true) {
+    deci = true;
+    value.innerText =  value.innerText + ".";
+    }
+
 })
 
 //
