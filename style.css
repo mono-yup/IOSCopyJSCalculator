@@ -19,16 +19,30 @@
 
 .regularBtn {
     background-color: #636362;
+    transition: background-color 1s;
 }
 
 .operatorBtn {
     background-color: orange;
+    transition: background-color 1s;
 }
 
 .settingsBtn {
-    background-color: #D6D6D6;
+    background-color:  #deded3;
     color: black;
+    transition: background-color 1s;
 }
+
+.settingsBtn:active {
+    background-color: #f7f7f7;
+}
+
+.selectedBTN {
+    background-color: white;
+    color: orange;
+    transition: background-color 1s;
+}
+
 
 #iphoneMock {
     width: var(--IphoneWidth);

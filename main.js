@@ -22,15 +22,10 @@ let decimal = document.getElementById("decimal");
 let equals = document.getElementById("equals");
 let num1;
 let num2;
-let operator;
+let operator = "";
 
-let numArr = [ seven, eight,  nine, four, five, six, one, two, three,  zero,]
-let operatorArr = [ negative,  clear, percentage, divide, multi, subtract, addition, decimal]
-
-
-equals.addEventListener("click", () => {
-       console.log(Number(value.innerText))
-    })
+let numArr = [ seven, eight,  nine, four, five, six, one, two, three,  zero, decimal]
+let operatorArr = [ negative,  clear, percentage, divide, multi, subtract, addition]
 
 numArr.forEach( (e) => {
     e.addEventListener("click", () => {
@@ -42,31 +37,59 @@ numArr.forEach( (e) => {
         }
         value.innerText =  value.innerText + total;
 
+        if (operator === "") {
+        num1 = Number(value.innerText);
+        console.log(num1)
+        }
+
         
     })
 });
 
-// 
+// Buttons
+let btns = document.querySelectorAll(".btn")
+//
 //math operators
 addition.addEventListener("click", () => {
-    num1 = Number(value.innerText);
     erase = true;
-    operator = "+"
+    operator = "+";
+    console.log("add");
+    addition.classList.replace("")
 })
 
+subtract.addEventListener("click", () => {
+    erase = true;
+    operator = "-";
+    console.log("minus");
+})
+
+multi.addEventListener("click", () => {
+    erase = true;
+    operator = "*";
+    console.log("Multi");
+})
+
+divide.addEventListener("click", () => {
+    erase = true;
+    operator = "/";
+    console.log("divide");
+})
 //
 //operators
 clear.addEventListener("click", () => {
     value.innerText = "0"
+    num1 = 0;
     erase = true});
 
-negative.addEventListener("click", () => {value.innerText = Number(value.innerText) * -1});
+negative.addEventListener("click", () => {
+    num1 = num1 * -1
+    value.innerText = num1});
 
 percentage.addEventListener("click", () => {
-    total =( Number(value.innerText) /100)
-    console.log(total)
+    num1 =(num1 /100)
+    console.log(num1)
     erase = true;
-    value.innerText = total.toString()
+    value.innerText = num1.toString()
 })
 
 //
@@ -75,9 +98,21 @@ percentage.addEventListener("click", () => {
 equals.addEventListener("click", () => {
     num2 = Number(value.innerText);
     if (operator === "+"){
-    total = num1 + num2;
-    value.innerText = total
+        num1 = num1 + num2;
+        value.innerText = num1;
     }
-
+    else if (operator === "-"){
+        num1 = num1 - num2;
+        value.innerText = num1;
+        }
+    else if (operator === "*"){
+        num1 = num1 * num2;
+        value.innerText = num1;
+        }
+    else if (operator === "/"){
+        num1 = num1 / num2;
+        value.innerText = num1;
+        }
+    operator = "";
     erase = true;
 }) 
