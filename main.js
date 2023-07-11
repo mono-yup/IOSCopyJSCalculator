@@ -28,6 +28,8 @@ let deci = false;
 let numArr = [ seven, eight,  nine, four, five, six, one, two, three,  zero]
 let operatorArr = [ negative,  clear, percentage, divide, multi, subtract, addition, decimal]
 
+allBtns = [value, negative, clear, percentage, divide, seven, eight, nine, multi, four, five, six, subtract, one, two, three, addition, zero, decimal, equals]
+    
 numArr.forEach( (e) => {
     e.addEventListener("click", () => {
         console.log(Number(e.innerText));
@@ -48,8 +50,21 @@ numArr.forEach( (e) => {
     })
 });
 
+allBtns.forEach( (e) => {
+    e.addEventListener("click", () => {
+        e.classList.remove("animation")
+        e.offsetWidth
+        e.classList.add("animation")
+    })
+});
+
 // Buttons
 let btns = document.querySelectorAll(".btn")
+btns.addEventListener("click", () => {
+    btns.classList.remove("animation")
+    btns.offsetWidth
+    btns.classList.add("animation")
+})
 //
 //math operators
 addition.addEventListener("click", () => {

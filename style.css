@@ -6,9 +6,27 @@
     border: none;
 }
 
+@keyframes click {
+    from {
+        background-color: white;
+    }
+
+    50% {
+        background-color: black;
+    }
+
+    to {
+        background-color: white;
+    }
+}
+
 :root {
     --IphoneWidth: calc(414px);
     --IphoneHeight: calc(896px);
+}
+
+.animation {
+    animation: click 2s;
 }
 
 .btn {
