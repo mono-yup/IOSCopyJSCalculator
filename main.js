@@ -97,11 +97,19 @@ divide.addEventListener("click", () => {
 clear.addEventListener("click", () => {
     value.innerText = "0"
     num1 = 0;
-    erase = true});
+    erase = true
+    clear.classList.remove("setAnimation");
+    clear.offsetWidth
+    clear.classList.add("setAnimation");
+});
 
 negative.addEventListener("click", () => {
-    num1 = num1 * -1
-    value.innerText = num1});
+    num1 = num1 * -1;
+    value.innerText = num1;
+    negative.classList.remove("setAnimation");
+    negative.offsetWidth
+    negative.classList.add("setAnimation");
+});
 
 percentage.addEventListener("click", () => {
     num1 =(num1 /100)
@@ -128,6 +136,9 @@ decimal.addEventListener("click", () => {
 //
 
 equals.addEventListener("click", () => {
+    equals.classList.remove("opAnimation");
+    equals.offsetWidth
+    equals.classList.add("opAnimation");
     num2 = Number(value.innerText);
     if (operator === "+"){
         num1 = num1 + num2;

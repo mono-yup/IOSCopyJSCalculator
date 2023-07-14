@@ -41,7 +41,7 @@
     }
 
     50% {
-        background-color: #c9c7c7;
+        background-color: #fdfdfd;
     }
 
     to {
@@ -79,23 +79,16 @@
 
 .operatorBtn {
     background-color: orange;
-    transition: background-color 1s;
 }
 
 .settingsBtn {
     background-color:  #deded3;
     color: black;
-    transition: background-color 1s;
-}
-
-.settingsBtn:active {
-    background-color: #f7f7f7;
 }
 
 .selectedBTN {
     background-color: white;
     color: orange;
-    transition: background-color 1s;
 }
 
 
