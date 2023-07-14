@@ -6,17 +6,46 @@
     border: none;
 }
 
-@keyframes click {
+@keyframes numClick {
     from {
-        background-color: white;
+        background-color: #636362;
     }
 
     50% {
-        background-color: black;
+        background-color: #bababa;
     }
 
     to {
-        background-color: white;
+        background-color: #636362;
+    }
+
+}
+
+    @keyframes opClick {
+        from {
+            background-color: orange;
+        }
+    
+        50% {
+            background-color: #edddc2;
+        }
+    
+        to {
+            background-color: orange;
+        }
+}
+
+@keyframes setClick {
+    from {
+        background-color: #deded3;
+    }
+
+    50% {
+        background-color: #c9c7c7;
+    }
+
+    to {
+        background-color: #deded3;
     }
 }
 
@@ -25,8 +54,16 @@
     --IphoneHeight: calc(896px);
 }
 
-.animation {
-    animation: click 2s;
+.numAnimation {
+    animation: numClick 350ms;
+}
+
+.opAnimation {
+    animation: opClick 350ms;
+}
+
+.setAnimation {
+    animation: setClick 350ms ;
 }
 
 .btn {

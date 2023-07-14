@@ -45,51 +45,52 @@ numArr.forEach( (e) => {
         num1 = Number(value.innerText);
         console.log(num1)
         }
+        e.classList.remove("numAnimation");
+        e.offsetWidth
+        e.classList.add("numAnimation");
 
         
     })
 });
 
-allBtns.forEach( (e) => {
-    e.addEventListener("click", () => {
-        e.classList.remove("animation")
-        e.offsetWidth
-        e.classList.add("animation")
-    })
-});
 
 // Buttons
-let btns = document.querySelectorAll(".btn")
-btns.addEventListener("click", () => {
-    btns.classList.remove("animation")
-    btns.offsetWidth
-    btns.classList.add("animation")
-})
 //
 //math operators
 addition.addEventListener("click", () => {
     erase = true;
     operator = "+";
     console.log("add");
-    addition.classList.replace("")
+    addition.classList.remove("opAnimation");
+    addition.offsetWidth
+    addition.classList.add("opAnimation");
 })
 
 subtract.addEventListener("click", () => {
     erase = true;
     operator = "-";
     console.log("minus");
+    subtract.classList.remove("opAnimation");
+    subtract.offsetWidth
+    subtract.classList.add("opAnimation");
 })
 
 multi.addEventListener("click", () => {
     erase = true;
     operator = "*";
     console.log("Multi");
+    multi.classList.remove("opAnimation");
+    multi.offsetWidth
+    multi.classList.add("opAnimation");
 })
 
 divide.addEventListener("click", () => {
     erase = true;
     operator = "/";
     console.log("divide");
+    divide.classList.remove("opAnimation");
+    divide.offsetWidth
+    divide.classList.add("opAnimation");
 })
 //
 //operators
@@ -107,6 +108,9 @@ percentage.addEventListener("click", () => {
     console.log(num1)
     erase = true;
     value.innerText = num1.toString()
+    percentage.classList.remove("setAnimation");
+    percentage.offsetWidth
+    percentage.classList.add("setAnimation");
 })
 
 decimal.addEventListener("click", () => {
@@ -114,6 +118,9 @@ decimal.addEventListener("click", () => {
     deci = true;
     value.innerText =  value.innerText + ".";
     }
+    decimal.classList.remove("numAnimation");
+    decimal.offsetWidth
+    decimal.classList.add("numAnimation");
 
 })
 
