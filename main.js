@@ -24,6 +24,7 @@ let num1;
 let num2;
 let operator = "";
 let deci = false;
+let lenth
 
 let numArr = [ seven, eight,  nine, four, five, six, one, two, three,  zero]
 let operatorArr = [ negative,  clear, percentage, divide, multi, subtract, addition, decimal]
@@ -32,7 +33,13 @@ allBtns = [value, negative, clear, percentage, divide, seven, eight, nine, multi
     
 numArr.forEach( (e) => {
     e.addEventListener("click", () => {
-        console.log(Number(e.innerText));
+        console.log(value.innerText.length);
+        if (value.innerText.length < 8) {
+            value.style.fontSize = "70px"
+        }
+        if (value.innerText.length >= 8) {
+            value.style.fontSize = "60px"
+        }
         total = e.innerText;
         if (erase === true){
             value.innerText = "";
