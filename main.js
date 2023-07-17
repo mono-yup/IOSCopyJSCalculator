@@ -30,28 +30,29 @@ let numArr = [ seven, eight,  nine, four, five, six, one, two, three,  zero]
 let operatorArr = [ negative,  clear, percentage, divide, multi, subtract, addition, decimal]
 
 allBtns = [value, negative, clear, percentage, divide, seven, eight, nine, multi, four, five, six, subtract, one, two, three, addition, zero, decimal, equals]
-    
+
 numArr.forEach( (e) => {
     e.addEventListener("click", () => {
+        if (operator === "") {
+        num1 = Number(value.innerText);
+        }
         console.log(value.innerText.length);
-        if (value.innerText.length < 8) {
-            value.style.fontSize = "70px"
+        if (value.innerText.length < 5) {
+            value.style.fontSize = "100px"
+            total = e.innerText;
+            value.innerText =  value.innerText + total;
         }
-        if (value.innerText.length >= 8) {
+        else if (value.innerText.length >= 5) {
             value.style.fontSize = "60px"
+            total = e.innerText;
+            value.innerText =  value.innerText + total;
         }
-        total = e.innerText;
         if (erase === true){
-            value.innerText = "";
+            value.innerText = num1;
             erase = false;
             deci = false
         }
-        value.innerText =  value.innerText + total;
 
-        if (operator === "") {
-        num1 = Number(value.innerText);
-        console.log(num1)
-        }
         e.classList.remove("numAnimation");
         e.offsetWidth
         e.classList.add("numAnimation");
